@@ -66,6 +66,9 @@ function init() {
     inquirer.prompt(questions).then((answers) => {
         console.log('Generating README');
         writeToFile('README.MD', generateMarkdown, ({...answers}));
+    })
+    .catch ((error) => {
+        console.log(error)
     });
 }
 
