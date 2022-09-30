@@ -60,6 +60,7 @@ function generateMarkdown(data) {
   \`\`\`
   ${data.test}
   \`\`\`
+  
 
   ## Contributing
 
@@ -77,5 +78,5 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown};
 
