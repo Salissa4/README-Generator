@@ -1,7 +1,7 @@
 // license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `![Github license](https://img.shields.io/badge/License-${license}-blue.svg)`;
+    return `![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
   return '';
 }
@@ -62,13 +62,14 @@ function generateMarkdown(data) {
   \`\`\`
   
 
-  ## Contributing
+  ## Contribute
 
-  ${data.contributing}
+  ${data.contribute}
 
   ## Questions
 
-  If you have any questions regarding repo, or issues please reach me at ${data.email}. Find more of my work at [${data.github}](https://github.com/${
+  Please reach me at ${data.email}. 
+  Find more of my work at [${data.github}](https://github.com/${
     data.github
   }/).
 
