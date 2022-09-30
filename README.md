@@ -15,7 +15,7 @@ View in action:
 https://drive.google.com/file/d/1F3PAds07HWkkQoTHa5ljGy2E7PGzusym/view
 
 
-<img src="./develop/images/readmegen.png">
+![Readme Gen](/Develop/images/readmegen.png)
 
 ## Credits
 
