@@ -9,12 +9,12 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your Github username',
+        message: 'Enter your Github username: ',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address',
+        message: 'Enter your email address: ',
     },
     {
         type: 'input',
@@ -24,7 +24,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Write a description of your project',
+        message: 'Write a description of your project: ',
     },
     {
         type: 'list',
@@ -35,19 +35,20 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'How does one install?',
+        message: 'Install by entering:',
         default: 'npm i',
     },
     {
         type: 'input',
         name: 'test',
-        message: 'What command is used to run a test?',
+        message: 'Test by entering the below into command line:',
         default: 'npm test',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Information regarding usage.',
+        message: 'Information regarding usage:',
+        default: 'none'
     },
     {
         type: 'input',
@@ -58,14 +59,14 @@ const questions = [
 
 // Function to write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName, data));
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
 // Function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
+    inquirer.prompt(questions).then((inquirerResponses) => {
         console.log('Generating README');
-        writeToFile('README.MD', generateMarkdown, ({...answers}));
+        writeToFile('README.MD', generateMarkdown, ({inquirerResponses}));
     });
 }
 
