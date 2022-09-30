@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is your project name?',
+        message: 'Enter your project name:',
     },
     {
         type: 'input',
@@ -47,12 +47,13 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please describe the use of your project.',
+        message: 'Please describe the use of your project:',
     },
     {
         type: 'input',
         name: 'contribute',
-        message: 'How to contribute to the repo?',
+        message: 'Want to contribute?',
+        default: 'See contact information',
     },
 ];
 
